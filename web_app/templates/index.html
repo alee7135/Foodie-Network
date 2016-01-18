@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://cdn.zingchart.com/zingchart.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css" type="text/css">
+    <!-- CartoDB -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../static/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/creative.css" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Yelp</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#search">Search</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#descriptive data">Descriptive Data</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">Network Graph</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#community map">Community Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Foodie Network</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h3 class="section-heading">Your guide to real authentic food</h3>
+                        <a href="#about" class="btn btn-default btn-xl first">Let's Find Out!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">How it Works</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-md-4 text-center">
+                    <div class="service-box">
+                        <img style='height:100px;width:150px;' src='static/img/eat.png'>
+                        <h3>Search a restaurant</h3>
+                        <p class="text-muted">Right now, this only works with popular San Francisco restaurants with greater than 500 reviews</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-md-4 text-center">
+                    <div class="service-box">
+                        <img style='height:100px;width:150px;' src='static/img/yelp.png'>
+                        <h3>Get Review Summary</h3>
+                        <p class="text-muted">See how diverse a restaurants foodies are</p>
+                        <p class="text-muted">See the top cruisines being rated by those foodies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding:40px;" class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#search" class="btn btn-default btn-xl first">Search Now!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-primary" id="search">
+        <div style='padding:30px;'class="container-fluid">
+            <div class="col-lg-12 col-md-12  text-center">
+                <h2 class="section-heading">Search a Restaurant</p>
+                <hr class="light">
+            </div>
+
+            <section class="newsletter row fade-down">
+                <form action="" method="GET" id="mc-embedded-subscribe-form" class="col-md-6 fade-down validate contact" novalidate>
+    	            <div id="mc_embed_signup_scroll" class="form-group">
+    		            <div class="clear">
+                            <input type="email" value="" name="user_search_term" class="required email" id="mce-EMAIL" placeholder="Please enter a yummy restaurant!">
+                            <input type="button" value="Submit" name="restaurant_id" id="mapbutton" class="btn-submit"  onClick="testResults(this.form)">
+                            <div class="checkbox">
+                                <label><input id='checkmark' type="checkbox" style="color:black;" value="">Check for suggestions by cruisine
+                            </div>
+                        </div>
+    	            </div>
+            	</form>
+            </section>
+        </div>
+        </div>
+    </div>
+    <div style="border:20px;padding-top:30px;padding-bottom:30px;background-color: #53c553;">
+        <div style="height:500px;overflow:auto;" class="table-responsive">
+          <table align="center" style="background-color:#ff9933;width:500px;margin:10px auto;" class="table hidden " id='sugg_table'>
+            <thead>
+                <p id='hi'></p>
+              <tr>
+                <th></th>
+                <th>Restaurant Name</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='res_results'><img id="img0" src=''></td>
+                <td class='res_results'><a id="name_id0" href=""></a></td>
+                <td class='res_results' id="rating0"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img1" src=''></td>
+                <td class='res_results'><a id="name_id1" href=""></a></td>
+                <td class='res_results' id="rating1"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img2" src=''></td>
+                <td class='res_results'><a id="name_id2" href=""></a></td>
+                <td class='res_results' id="rating2"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img3" src=''></td>
+                <td class='res_results'><a id="name_id3" href=""></a></td>
+                <td class='res_results' id="rating3"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img4" src=''></td>
+                <td class='res_results'><a id="name_id4" href=""></a></td>
+                <td class='res_results' id="rating4"></td>
+              </tr>
+              <!-- <tr>
+                <td class='res_results'><img id="img5" src=''></td>
+                <td class='res_results'><a id="name_id5" href=""></a></td>
+                <td class='res_results' id="rating5"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img6" src=''></td>
+                <td class='res_results'><a id="name_id6" href=""></a></td>
+                <td class='res_results' id="rating6"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img7" src=''></td>
+                <td class='res_results'><a id="name_id7" href=""></a></td>
+                <td class='res_results' id="rating7"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img8" src=''></td>
+                <td class='res_results'><a id="name_id8" href=""></a></td>
+                <td class='res_results' id="rating8"></td>
+              </tr>
+              <tr>
+                <td class='res_results'><img id="img9" src=''></td>
+                <td class='res_results'><a id="name_id9" href=""></a></td>
+                <td class='res_results' id="rating9"></td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <section class="no-padding" id="community map">
+
+        <div id="map"></div>
+        <script>
+        function testResults(form) {
+            // var TestVar = form.inputbox.value;
+            // document.getElementById('result').innerHTML = TestVar;
+
+            if (document.getElementById('checkmark').checked){
+                var tab = document.getElementById('sugg_table').className;
+                document.getElementById('sugg_table').className = 'table unhidden'
+
+                var restaurants
+
+                $.getJSON('/request', {user_search_term: $('input[name="user_search_term"]').val()},
+                    function (data) {
+                        name_id = data.name_id
+                        img = data.img
+                        url = data.url
+                        rating = data.rating
+                        lat = data.lat
+                        log = data.log
+                        for (i = 0; i < name_id.length; i++) {
+                            $("#img" + String(i) ).attr("src", img[i])
+                            $("#name_id" + String(i) ).attr("href", url[i])
+                            $("#name_id" + String(i) ).text(name_id[i])
+                            $("#rating" + String(i) ).text(rating[i])
+                        }
+                  });
+          } else {
+              $.getJSON('/model', {user_search_term: $('input[name="user_search_term"]').val()},
+                  function (data) {
+                      var some = data.business_ids
+                      businesses = ''
+                      for (i = 0; i < some.length; i++) {
+                            businesses += "'" + some[i]+ "',";
+                        }
+                      businesses = "(" + businesses.slice(0,-1) + ")"
+                    //   load_map(businesses)
+
+                      var ratings = data.ratings
+                      var votes = data.votes
+                      // Run the graph
+                      rating_stats(ratings)
+                      vote_stats(votes)
+
+                });
+          }
+        };
+
+        window.onload = function() {
+            var vizjson = 'https://alee7135.cartodb.com/api/v2/viz/240717be-ba35-11e5-a256-0e674067d321/viz.json';
+            var options = {
+                center: [37.773972, -122.431297],
+                zoom: 13,
+                zoomControl: true,
+                scrollwheel: true,
+                layer_selector: true,
+                legends: true,
+                search: true,
+                cardb_logo: false,
+
+            };
+            var sublayers = [];
+            // Instantiate new map object (Leaflet) on specified DOM element
+            var map_object = new L.Map('map', options);
+            // Add a stamen basemap to the map object just created
+            L.tileLayer("http://tile.stamen.com/terrain/{z}/{x}/{y}.png",{
+                attribution:'Stamen'
+            }).addTo(map_object)
+
+            function createSelector(layer) {
+                var condition = "";
+                var $options = $(".clear").find("input");
+
+                $("input").click(function(e){
+                    var idClicked = e.target.id;
+                    $.getJSON('/model', {user_search_term: $('input[name="user_search_term"]').val()},
+                        function (data) {
+                            var some = data.business_ids
+                            var businesses = ''
+                            for (i = 0; i < some.length; i++) {
+                                  businesses += "'" + some[i]+ "',";
+                              }
+                            businesses = "(" + businesses.slice(0,-1) + ")"
+                            var subLayerOptions = {
+                                sql: "SELECT * FROM yelp_businesses_1"
+                            }
+                            sublayer.set(subLayerOptions);
+                            sublayers.push(sublayer);
+                            // alert(businesses)
+                      });
+                });
+            }
+
+
+            // Add new map layer with restaurant data on top of Leaflet base layer
+            cartodb.createLayer(map_object, vizjson)
+            .addTo(map_object)
+            // listen for events, triggered once visualization is done
+            .on('done', function(layer){
+                layer.setInteraction(true);
+                layer.on('error', function(err){
+                    cartodb.log.log('error:' + err);
+                });
+                // Add new map layer with restaurant data on top of Leaflet base layer
+                // if (typeof businesses !== 'undefined'){
+                //     var subLayerOptions = {
+                //         sql: "SELECT * FROM yelp_businesses_1 where id in " +  businesses
+                //     }
+                // } else {
+                //     var subLayerOptions = {
+                //         sql: "SELECT * FROM yelp_businesses_1"
+                //     }
+                // }
+                // var subLayerOptions = {
+                //     sql: "SELECT * FROM yelp_businesses_1 where id in " +  businesses
+                // }
+
+
+                var sublayer = layer.getSubLayer(0);
+
+                createSelector(sublayer);
+
+            // listen for error events
+            }).on('error', function()
+                {
+                    cartodb.log.log('some error occurred');
+                });
+            }
+
+
+        </script>
+    </section>
+
+    <section style="height:580px;padding-bottom:70px" id="descriptive data">
+        <div class='row'>
+            <div class="col-sm-6" id ='ratings'></div>
+            <div class = "col-sm-6" id ='votes'></div>
+        </div>
+        <script>
+            function rating_stats(data){
+                var chartData={
+                  "type":"bar",  // Specify your chart type here.
+                  "height":"100%",
+                  "width":"100%",
+                  "scale-x":{
+                      "label":{"text":"Overall Restaurant Ratings",},
+                      "labels":['5', '4', '3', '2', '1']
+                  },
+                  "plot":{
+                      "styles":"black",
+                      "bar-width":"50px"
+                  },
+                  "plotarea": {
+                    "adjust-layout":true
+                  },
+                  "scale-y":{
+                      "label":{"text":"Count",},
+                  },
+                  "series":[  // Insert your series data here.
+                      { "values": data}, // ratings
+                  ]
+                };
+                zingchart.render({ // Render Method[3]
+                  id:'ratings',
+                  data:chartData,
+                  height:400,
+                  width:600
+                });
+            };
+            function vote_stats(data){
+                var chartData={
+                  "type":"bar",  // Specify your chart type here.
+                  "height":"100%",
+                  "width":"100%",
+                  "scale-x":{
+                      "label":{"text":"Overall Restaurant Votes",},
+                      "labels":['funny', 'useful', 'cool']
+                  },
+                  "plot":{
+                      "styles":["yellow","green",'blue'],
+                      "bar-width":"50px"
+                  },
+                  "plotarea": {
+                    "adjust-layout":true
+                  },
+                  "scale-y":{
+                      "label":{"text":"Count",},
+                  },
+                  "series":[  // Insert your series data here.
+                      { "values": data}, // ratings
+                  ]
+                };
+                zingchart.render({ // Render Method[3]
+                  id:'votes',
+                  data:chartData,
+                  height:400,
+                  width:600
+                });
+            };
+
+        </script>
+    </section>
+
+    
+
+    <!-- <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Free Download at Start Bootstrap!</h2>
+                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+            </div>
+        </div>
+    </aside> -->
+
+    <section id="contact">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-4 col-sm-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn"></i>
+                    <p><a href="mailto:your-email@your-domain.com"></a>E-Mail</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 text-center">
+                    <i class="fa fa-linkedin fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>LinkedIn</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 text-center">
+                    <i class="fa fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>Github</p>
+                </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/js/jquery.easing.min.js"></script>
+    <script src="static/js/jquery.fittext.js"></script>
+    <script src="static/js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="static/js/creative.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+    <script type=text/javascript>
+    $( ".table" ).click(function( event ) {
+      event.preventDefault();
+      $( "<div>" )
+        .append( "default " + event.type + " prevented" )
+        .appendTo( "#log" );
+    });
+
+
+    </script>
+
+</body>
+
+</html>

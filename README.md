@@ -73,7 +73,11 @@ Now that I have my network of reviews separated into communities, I can leverage
 ## Other Technologies
 •	Amazon S3, EC2
 •	CartoDB
+•	ZingCharts
 •	Javascript, HTML, CSS
+• Bootstrap
 •	MongoDB
+
+
 
 

@@ -49,18 +49,11 @@ Using the network, I tried several algorithms but I settled with the fast-greedy
 Considering the difficulty in validating unsupervised clustering-type algorithms, this was no different. Initially, I figured that I could establish a baseline using average restaurant ratings. My hypothesis is that communities of users will rate similarly when compared to just the average of all users. First, I compute the mean-square-error between the average rating and actual rating for each review. Second, I compute the mean-square-error for average community ratings and actual ratings. Again, my hypothesis was that communities of users tend to rate more similarly than just the average user which means the MSE for communities should be lower. Turns out, the average still does better. This indicates that communities of a restaurant are not always heterogeneous because just because two people are in same community, it doesn’t mean they will rate the same. This was quite a powerful insight because it tells me that I can not predict a user’s rating simply based on his similarity to other users. That is, communities of users may eat the same food but they could have vastly different opinions about the same food. Without this evaluation metric and no time to perform a proper A/B test, I decided to simply use human evaluation of the results. 
 
 ## Compute Authenticity Reweighting
-Now that I have my network of reviews separated into communities, I can leverage the community structure to reweight reviews based on the authenticity of each user. It is possible to have 3 different weights for each review (network edge) and they are 
-
-##Results
-Once the model has separated the network into communities, it is time to use this information to analyze reviews. Given that each node in the graph (business, user) belongs to a community, I would like to find out the cohesiveness of a particular restaurant. A restaurant with high cohesiveness means that users tend to review the same businesses or businesses tend to be reviewed by the same users. Conversely, the opposite is true, a rest low cohesive score indicates that users and businesses are not very similar. How do I measure this? With network centrality measures. In general centrality measures the importance of a single node but importance can be defined in very different ways. For the purposes of this project, I used closeness centrality because it is fast to compute and it measures the total distance from every node to every other node. This gives a sense of cohesion or density for each restaurant’s community. I computed this value for every node and took the average for all nodes within a given community to compute its closeness metric. 
-
-The way I compute closeness is very important. If given a restaurant, I filter the entire network for 1) the users and businesses that belong to the same community as the restaurant and 2) every user and all businesses each user has ever reviewed. There may be some overlap but it is not guaranteed that just because a user reviewed the restaurant in interest means they belong to the same community (in fact this is often not the case). Therefore, I am looking for the how cohesive a restaurant’s user connections are to its only community connections. Once the closeness centrality is computed for each restaurant, I can compute a global average closeness which I can then use as the baseline to compare with any one given restaurant. In my model, it was ~0.30.
-
-To demonstrate this with an example, I search Yelp for the most authentic Chinese restaurant. I filter the restaurant’s network and I find that 
+Now that I have my network of reviews separated into communities, I can leverage the community structure to reweight reviews based on the authenticity of each user. Suppose I was interested in the authenticity of Chinese cuisine for restaurant X. For each user, I compute a weighted average of proportion of Chinese restaurants that the user has rated for each type of review: 1) User belongs to the same community as Restaurant X and he/she has reviewed restaurant within Restaurant X's community, give highest weight of say 3; 2) User belongs to the same community as Restaurant X and he/she reviewed restaurant outside of the community of Restaurant X, give medium weight of 2; 3) User belongs to a different community from Restaurant X and has either reviewed a restaurant within or outside of Restaurant X's community, give lowest weight of 1. The value of the weight is arbitrary as long as it is constant because I will normalize by dividing by the sum of the weights for each user. Now, this gives a weighted average weight for each review. I ultimately weight value for each user to recompute a new Yelp rating for Restaurant X, taking into account authenticity. 
 
 
 
-##Packages Used
+##Python Packages Used
 •	NumPy
 •	pandas
 •	SciPy
@@ -70,3 +63,14 @@ To demonstrate this with an example, I search Yelp for the most authentic Chines
 •	PyMongo
 •	threading
 •	Flask
+•	NetworkX
+•	iGraph
+•	GraphTools
+
+## Other Technologies
+•	Amazon S3, EC2
+•	CartoDB
+•	Javascript, HTML, CSS
+•	MongoDB
+
+

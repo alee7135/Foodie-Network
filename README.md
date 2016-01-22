@@ -1,5 +1,6 @@
 # FOODIE NETWORK
 ### Your Guide to More Authentic Yelp Reviews 
+![alt tag](https://github.com/alee7135/yelp/blob/master/imgs/foodie_network.png)
 
 ##What does Authenticity Mean to you?
 Thousands of restaurant reviews on Yelp but unfortunately users have little direct information about which reviews are legitimate? Although Yelp has an automated filtering algorithm which filters out reviews based on the reputation of each reviewer, it still doesn’t necessarily distinguish between reviews which are more authentic than others. I define authenticity as a user (reviewer) who reviews a single cuisine type with high frequency within its immediate network (I'll elaborate more on this). 

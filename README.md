@@ -1,5 +1,6 @@
 # FOODIE NETWORK
 ### Your Guide to More Authentic Yelp Reviews 
+![alt tag](https://github.com/alee7135/yelp/blob/master/imgs/foodie_network.png)
 
 ##What does Authenticity Mean to you?
 Thousands of restaurant reviews on Yelp but unfortunately users have little direct information about which reviews are legitimate? Although Yelp has an automated filtering algorithm which filters out reviews based on the reputation of each reviewer, it still doesn’t necessarily distinguish between reviews which are more authentic than others. I define authenticity as a user (reviewer) who reviews a single cuisine type with high frequency within its immediate network (I'll elaborate more on this). 
@@ -10,6 +11,7 @@ Theoretically, every user on Yelp has a different level of qualification to rate
 Yelp business data is available through the Yelp API. I downloaded ~ 7,000 restaurants in San Francisco. However, unfortunately the API does not provide user profile data or review data. For this, I scraped over 100,000 reviews and over 15,000 user profile data. Since scraping for all 7,000+ restaurants would have taken more time than I had especially after dealing with multiple bans from Yelp, I decided to filter my dataset to only include restaurants with greater than 500 reviews and users with a elite badge. The scraping was an involved process which included iterating each restaurant, page, user, and review each user did. I deployed 10 EC2 instances by sending a custom bash script to each machine to install the necessary updates and packages and to run my python script to scrape Yelp. I wrote another script to send data from each instance to Amazon S3 for storage. I scraped reviews for the user id, business id, rating, votes, review text, date and whether it was check-in. I scraped user profiles for the user id, friend count, votes, photo count, name, elite, rating summary, and hometown. 
 
 ##Repo Structure
+```
 ├── code
 |   ├── yelp_api.py (module to access/connect to the Yelp API and make requests)
 |   ├── get_restaurants.py (module to connect to Yelp API and retrieve 7000+ restaurants in San Francisco)
@@ -33,6 +35,7 @@ Yelp business data is available through the Yelp API. I downloaded ~ 7,000 resta
 |
 ├── imgs
 |   └── images for readme.md
+```
 
 ##Data Pipeline
 
@@ -70,7 +73,11 @@ Now that I have my network of reviews separated into communities, I can leverage
 ## Other Technologies
 •	Amazon S3, EC2
 •	CartoDB
+•	ZingCharts
 •	Javascript, HTML, CSS
+• Bootstrap
 •	MongoDB
+
+
 
 
